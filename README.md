@@ -112,4 +112,8 @@ va',va",va(,va[,va{,va< "select an brackets with brackets"
 qa "VERY IMPORTANT. macro recording start/stop. save to reg a"
 @a "do the macro recording in reg a"
 xxx@a "do the macro xxx times"
+^a "number add 1"
+<num>^a "number add num"
+^x "number minus 1"
+<num>^x "number minus num"
 ```
