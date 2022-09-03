@@ -1,12 +1,40 @@
 # ghrvimrc
 **my vim configuration**
 
+Highly Recommended: [VimGolf: Real Vim ninjas count every keystroke](https://www.vimgolf.com/)
+
+An example:
+
+Input File:
+
+```
+A HAPPY END WITH YEAR 2013 !
+```
+
+Output File:
+
+```
+A HAPPY NEW YEAR 2014 !
+```
+
+Beginners will do:
+
+```
+llllllllllxxxxxxxxiNEW<ESC>lllllllllllxi4<ESC>:wq!
+```
+
+Master will do:
+
+```
+ww8sNEW<Esc><C-A>ZZ
+```
 
 vim shortcuts
 
 ```
 hjkl "move the cursor"
-:q! "exit the editor"
+ZQ=:q! "force exit"
+ZZ=:wq "write and quit"
 <ESC> "escape and enter the normal mode"
 x "delete current character"
 X "delete character before"
