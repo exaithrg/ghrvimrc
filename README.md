@@ -1,4 +1,4 @@
-# ghrvimrc
+# Vimrc Repo
 **my vim configurations and more**
 
 ## vim shortcuts
