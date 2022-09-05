@@ -1,6 +1,8 @@
 # Vimrc Repo
 **my vim configurations and more**
 
+u can find the most popular vim plugins on **[VimAwesome](https://vimawesome.com/)**
+
 ## vim shortcuts
 
 ```
