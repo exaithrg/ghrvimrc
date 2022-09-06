@@ -1,0 +1,87 @@
+" An example for a vimrc file.
+"
+" Maintainer:	Bram Moolenaar <Bram@vim.org>
+" Last change:	2019 Dec 17
+"
+" To use it, copy it to
+"	       for Unix:  ~/.vimrc
+"	      for Amiga:  s:.vimrc
+"	 for MS-Windows:  $VIM\_vimrc
+"	      for Haiku:  ~/config/settings/vim/vimrc
+"	    for OpenVMS:  sys$login:.vimrc
+
+" When started as "evim", evim.vim will already have done these settings, bail
+" out.
+if v:progname =~? "evim"
+  finish
+endif
+
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file (restore to previous version)
+  if has('persistent_undo')
+    set undofile	" keep an undo file (undo changes after closing)
+  endif
+endif
+
+if &t_Co > 2 || has("gui_running")
+  " Switch on highlighting the last used search pattern.
+  set hlsearch
+endif
+
+" Put these in an autocmd group, so that we can delete them easily.
+augroup vimrcEx
+  au!
+
+  " For all text files set 'textwidth' to 78 characters.
+  autocmd FileType text setlocal textwidth=78
+augroup END
+
+" Add optional packages.
+"
+" The matchit plugin makes the % command work better, but it is not backwards
+" compatible.
+" The ! means the package won't be loaded right away but when plugins are
+" loaded during initialization.
+if has('syntax') && has('eval')
+  packadd! matchit
+endif
+
+set noundofile
+set nobackup " 覆盖文件时不备份
+set noswapfile
+set backupcopy=yes " 设置备份时的行为为覆盖
+setlocal noswapfile " 不要生成swap文件
+set bufhidden=hide " 当buffer被丢弃的时候隐藏它
+"colorscheme default " 设定配色方案
+set nu " show row number 
+set rnu " reletive row number
+"set cursorline " 突出显示当前行
+set ruler " 打开状态栏标尺
+set shiftwidth=4 " 设定 << 和 >> 命令移动时的宽度为 4
+set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
+set tabstop=4 " 设定 tab 长度为 4
+set autochdir " 自动切换当前目录为当前文件所在的目录
+"set hlsearch " 搜索时高亮显示被找到的文本
+set is "incremental search
+set noerrorbells " 关闭错误信息响铃
+set novisualbell " 关闭使用可视响铃代替呼叫
+set t_vb= " 置空错误铃声的终端代码
+set matchtime=2 " 短暂跳转到匹配括号的时间
+set magic " 设置魔术
+set smartindent " 开启新行时使用智能自动缩进
+set backspace=indent,eol,start " 不设定在插入状态无法用退格键和 Delete 键删除回车符
+set cmdheight=1 " 设定命令行的行数为 1
+set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
+set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ %{&encoding}\ Ln\ %l,\ Col\ %c/%L%) " 设置在状态行显示的信息
+set foldenable " 开始折叠
+set foldmethod=syntax " 设置语法折叠
+set foldcolumn=0 " 设置折叠区域的宽度
+setlocal foldlevel=1 " 设置折叠层数为 1
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
+
+set guifont=Consolas:h16:cANSI:qDRAFT
