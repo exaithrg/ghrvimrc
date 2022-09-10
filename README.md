@@ -5,7 +5,7 @@ u can find the most popular vim plugins on **[VimAwesome](https://vimawesome.com
 
 ## vim shortcuts
 
-```
+```css
 hjkl "move the cursor"
 ZQ=:q! "force quit"
 ZZ=:wq "write and quit"
@@ -125,3 +125,6 @@ F1 "start help"
 :help user-manual "getting help"
 :g/V/t.|-d<CR>ZZ "hello vimgolf"
 ```
+
+
+
