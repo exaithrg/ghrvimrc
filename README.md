@@ -125,6 +125,15 @@ F1 "start help"
 :g/V/t.|-d<CR>ZZ "hello vimgolf"
 ```
 
+## MyKeyMap
+
+```css
+vnoremap <C-C> "+y	"Ctrl+C"
+vnoremap <C-X> "+d	"Ctrl+X"
+nnoremap <C-V> "+p	"Ctrl+V"
+nnoremap QQ :q!<CR>	"QQ not ZQ"
+```
+
 ## Links
 
 **Thanks to**
