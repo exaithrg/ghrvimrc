@@ -1,9 +1,16 @@
 # Vimrc Repo
+
+**IMPORTANT NOTICE: This repository is out of maintenance, please check [dotfiles](https://github.com/njughr/dotfiles) for the latest updates.**
+
 **my vim configurations and more**
 
 u can find the most popular vim plugins on **[VimAwesome](https://vimawesome.com/)**
 
 ## vim shortcuts
+
+> Stick with it because I'd say that in about 20 hours of programming using a new editor you'll be back to the same speed at which you programed using your old tool and then after that the benefits will start, and you'll get faster and faster as you learn more.
+>
+> Once this becomes muscle memory you can basically **edit files at the speed at which you think**.
 
 ```css
 hjkl "move the cursor"
@@ -13,12 +20,18 @@ ZZ=:wq<CR> "write and quit"
 u "undo"
 U "undo, whole line"
 ^R "redo"
-x "delete current character"
+x=dl "delete current character"
 X "delete character before"
-^f "Page Down"
-^b "Page Up"
-^d "Half Page Down"
-^u "Half Page Up"
+zz "curnt line scroll to center"
+zt "curnt line scroll to top"
+zb "curnt line scroll to bottom"
+H "cursor move to top"
+M "cursor move to middle"
+L "cursor move to bottom"
+^f "Page Down FForward"
+^b "Page Up BBackward"
+^d "Half Page DDown"
+^u "Half Page UUp"
 ^e "scroll one line down"
 ^y "scroll one line up"
 ^g "show where you current are"
@@ -30,25 +43,35 @@ X "delete character before"
 ^x "minus 1"
 <n>^x "minus n"
 i "insert"
+I "insert at the begin of the line"
 a "append"
 A "apend after the end of the line"
 r<x> "replace a character with x"
 R "continue replace a lot of characters"
-s "delete character and insert"
-S "delete line and insert"
+s=cl "delete character and start insert"
+S "delete line and start insert"
 e "next end of a word"
 w "next start of a word"
 W "next WORD, sep by BLANK"
 b "front start of a word"
 ge "front end of a word"
-f<x> "find the n-th character x"
+f<x> "find char x on the curnt line"
+F<x> "backward find char x"
+; "navigating f matches"
+, "backward navigating f matches"
+t<x> "move cursor till char x"
+T<x> "move cursor back till char x"
+/{regex} "search regular expression"
+?{regex} "backward search regex"
+n "next search"
+N "backward next search"
 % "find a matching bracket"
 ^ "go to the first NOT blank char"
 0 "move to the start of the line"
 $ "go to end of a line"
 gg "go to start of the file"
 G "go to the end of the file"
-<n>G "go to line n"
+<n>G=<n><CR>=:<n> "go to line n"
 <p>% "go to location <p>%"
 p "paste, or put"
 y "yank, copy text"
@@ -60,9 +83,6 @@ yy=Y "copy current line"
 dd "delete and copy current line"
 ddp "swap lines"
 cc "change the whole line"
-zz "current to screen center"
-zt "current to screen top"
-zb "current to screen bottom"
 o "new line and start insert"
 O "new line above and start insert"
 de "del to the end space without space"
@@ -74,6 +94,9 @@ cw "change the word, seems equal to ce"
 ciw "can change all blank char"
 . "repeat the last OPERATION"
 d$ "delete to the end of the line"
+~ "flips the case of a character"
+gu{motion} "to lowercase"
+gU{motion} "to uppercase"
 <sym>=b() [] B{} <> '' ""
 ci<sym> "change in <sym>"
 di<sym> "delete in <sym>"
@@ -83,12 +106,6 @@ ca<sym> "change include <sym>"
 da<sym> "delete include <sym>"
 ya<sym> "copy include <sym>"
 va<sym> "selet include <sym>"
-/abc "search abc"
-?abc "backward search abc"
-n "next search"
-N "backward next search"
-<n>s "del n characters and insert"
-<n>G=:<n> "move to line n"
 qq "reg q recording start/stop "
 @q "exe reg q macro"
 <n>@q "exe reg q macro n times"
@@ -134,14 +151,18 @@ nnoremap <C-P> "+p	"Vim Ctrl+V"
 nnoremap QQ :q!<CR>	"QQ not ZQ"
 ```
 
-## Links
+## Thanks
 
-**Thanks to**
+[MIT instructor Anish's vimrc](https://github.com/anishathalye/dotfiles/blob/master/vimrc)
 
-[最强Vim新手指南，手把手教你打造只属于自己的代码编辑器！](https://www.bilibili.com/video/BV1UQ4y1z7q5?spm_id_from=333.337.search-card.all.click&vd_source=14d31885014e67975c65bd7a2dedbc60)
+[MIT instructor Jon's nvimrc](https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.vim)
 
-[MarsWang42](https://github.com/MarsWang42) / **[My-Vim-Conf](https://github.com/MarsWang42/My-Vim-Conf)**
+[MIT instructor Jose's vimrc](https://github.com/JJGO/dotfiles/blob/master/vim/.vimrc)
 
 [上古神器Vim：进阶使用/配置、必备插件介绍 - 终极Vim教程02 - 带你配置属于你自己的最强IDE](https://www.bilibili.com/video/BV1e4411V7AA/?spm_id_from=333.788.recommend_more_video.0&vd_source=14d31885014e67975c65bd7a2dedbc60)
 
-[theniceboy](https://github.com/theniceboy) / **[vimrc-example](https://github.com/theniceboy/vimrc-example)**
+[theniceboy](https://github.com/theniceboy) / **[vimrc-example](https://github.com/theniceboy/vimrc-example)** [TheCW]
+
+[最强Vim新手指南，手把手教你打造只属于自己的代码编辑器！](https://www.bilibili.com/video/BV1UQ4y1z7q5?spm_id_from=333.337.search-card.all.click&vd_source=14d31885014e67975c65bd7a2dedbc60)
+
+[MarsWang42](https://github.com/MarsWang42) / **[My-Vim-Conf](https://github.com/MarsWang42/My-Vim-Conf)** [MARS]
