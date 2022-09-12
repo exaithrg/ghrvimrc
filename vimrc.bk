@@ -54,6 +54,8 @@ vnoremap <C-C> "+y
 vnoremap <C-X> "+d
 nnoremap <C-V> "+p
 
+nnoremap QQ :q!<CR>
+
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR> " 用空格键来开关折叠
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
