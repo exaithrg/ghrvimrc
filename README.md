@@ -128,9 +128,9 @@ F1 "start help"
 ## MyKeyMap
 
 ```css
-vnoremap <C-C> "+y	"Ctrl+C"
-vnoremap <C-X> "+d	"Ctrl+X"
-nnoremap <C-V> "+p	"Ctrl+V"
+vnoremap <C-Y> "+y	"Vim Ctrl+C"
+vnoremap <C-D> "+d	"Vim Ctrl+X"
+nnoremap <C-P> "+p	"Vim Ctrl+V"
 nnoremap QQ :q!<CR>	"QQ not ZQ"
 ```
 
