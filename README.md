@@ -125,5 +125,14 @@ F1 "start help"
 :g/V/t.|-d<CR>ZZ "hello vimgolf"
 ```
 
+## Links
 
+**Thanks to**
 
+[最强Vim新手指南，手把手教你打造只属于自己的代码编辑器！](https://www.bilibili.com/video/BV1UQ4y1z7q5?spm_id_from=333.337.search-card.all.click&vd_source=14d31885014e67975c65bd7a2dedbc60)
+
+[MarsWang42](https://github.com/MarsWang42) / **[My-Vim-Conf](https://github.com/MarsWang42/My-Vim-Conf)**
+
+[上古神器Vim：进阶使用/配置、必备插件介绍 - 终极Vim教程02 - 带你配置属于你自己的最强IDE](https://www.bilibili.com/video/BV1e4411V7AA/?spm_id_from=333.788.recommend_more_video.0&vd_source=14d31885014e67975c65bd7a2dedbc60)
+
+[theniceboy](https://github.com/theniceboy) / **[vimrc-example](https://github.com/theniceboy/vimrc-example)**
